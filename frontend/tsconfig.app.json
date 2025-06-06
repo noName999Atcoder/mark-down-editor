@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    // TypeScriptのビルド情報ファイルの保存場所
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // コンパイル後のJavaScriptのバージョン
+    "target": "ES2020",
+    // クラスフィールドの定義方法を制御
+    "useDefineForClassFields": true,
+    // 使用可能なライブラリの指定
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // モジュールシステムの指定
+    "module": "ESNext",
+    // 型定義ファイルのチェックをスキップ
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    // モジュール解決方法の指定
+    "moduleResolution": "bundler",
+    // TypeScriptの拡張子でのインポートを許可
+    "allowImportingTsExtensions": true,
+    // モジュール構文の厳格な使用を強制
+    "verbatimModuleSyntax": true,
+    // モジュール検出を強制
+    "moduleDetection": "force",
+    // JavaScriptファイルの出力を無効化
+    "noEmit": true,
+    // ReactのJSX変換を有効化
+    "jsx": "react-jsx",
+
+    /* Linting */
+    // 厳格な型チェックを有効化
+    "strict": true,
+    // 未使用のローカル変数をエラーとして報告
+    "noUnusedLocals": true,
+    // 未使用のパラメータをエラーとして報告
+    "noUnusedParameters": true,
+    // 構文のみのエラーを報告
+    "erasableSyntaxOnly": true,
+    // switch文でのフォールスルーを禁止
+    "noFallthroughCasesInSwitch": true,
+    // 副作用のあるインポートのチェックを強化
+    "noUncheckedSideEffectImports": true
+  },
+  // コンパイル対象のディレクトリ
+  "include": ["src"]
+}

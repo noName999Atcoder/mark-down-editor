@@ -1,0 +1,7 @@
+# Go build artifacts
+main
+main.exe
+markdown-editor
+markdown-editor.exe
+
+# 既存の無視設定 

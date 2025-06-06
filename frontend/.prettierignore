@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.storybook/
+build/
+coverage/
+*.min.js
+*.svg
