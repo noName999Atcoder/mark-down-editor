@@ -1,4 +1,4 @@
-module github.com/yourusername/mark-down-editor
+module mark-down-editor
 
 go 1.20
 
@@ -7,7 +7,4 @@ require (
 	github.com/joho/godotenv v1.5.1
 )
 
-require (
-	github.com/felixge/httpsnoop v1.0.3 // indirect
-	github.com/gorilla/securecookie v1.1.2 // indirect
-)
+require github.com/gorilla/websocket v1.5.3

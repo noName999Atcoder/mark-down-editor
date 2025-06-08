@@ -5,6 +5,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // Viteの設定ファイル
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   // プラグインの設定
   plugins: [react(), tsconfigPaths()],
   server: {
