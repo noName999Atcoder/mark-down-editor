@@ -37,7 +37,8 @@ func main() {
 	mux.Handle("/", fs)
 
 	// APIルーター（"/api"などにマウント）
-	mux.Handle("/api/", router.NewRouter())
+	apiRouter := router.NewRouter(mux)
+	mux.Handle("/api/", http.StripPrefix("/api", apiRouter))
 
 	// サーバー起動メッセージ
 	log.Println("http://localhost:8080 を開いてください")

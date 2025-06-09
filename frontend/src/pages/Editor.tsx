@@ -1,6 +1,21 @@
 import { Box, Button, Flex, HStack, Spacer, Textarea } from '@chakra-ui/react';
+import { useEffect } from 'react';
 
 export default function Editor(): JSX.Element {
+  useEffect(() => {
+    const socket = new WebSocket('ws://localhost:8080/api/ws');
+    socket.onopen = () => {
+      console.log('✅ WebSocket 接続成功');
+    };
+    socket.onerror = (error) => {
+      console.error('❌ WebSocket エラー:', error);
+    };
+
+    return () => {
+      socket.close();
+    };
+  }, []);
+
   return (
     <>
       <Flex height="100vh" direction="column">

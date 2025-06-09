@@ -2,17 +2,15 @@ package router
 
 import (
 	"mark-down-editor/backend/ws"
-
-	"github.com/gorilla/mux"
+	"net/http"
 )
 
-func NewRouter() *mux.Router {
-	router := mux.NewRouter()
+func NewRouter(router *http.ServeMux) *http.ServeMux {
 	hub := ws.NewHub()
 	go hub.Start()
 
 	// APIエンドポイント設定。
-	router.HandleFunc("/ws", hub.WSHandler).Methods("POST")
+	router.HandleFunc("/ws", hub.WSHandler)
 
 	// 作成したrouterを返却する。
 	return router
